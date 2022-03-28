@@ -13,23 +13,31 @@ public class TesteListEncadeada {
     }
 
     static void varrerListaEncadeada(Encadeado encadeado) {
-        if (encadeado != null && encadeado.proximo != null) {
-            System.out.println(encadeado + " proximo -> " + encadeado.proximo);
-            varrerListaEncadeada(encadeado.proximo);
+        if (encadeado != null && encadeado.getProximo() != null) {
+            System.out.println(encadeado + " proximo -> " + encadeado.getProximo());
+            varrerListaEncadeada(encadeado.getProximo());
         } else {
-            System.out.println(encadeado+ " proximo -> NULL");
+            System.out.println(encadeado + " proximo -> NULL");
         }
     }
 }
 
 
 class Encadeado {
-    String descricao;
-    Encadeado proximo;
+    private String descricao;
+    private Encadeado proximo;
 
     public Encadeado(String descricao, Encadeado proximo) {
         this.descricao = descricao;
         this.proximo = proximo;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public Encadeado getProximo() {
+        return proximo;
     }
 
     @Override
