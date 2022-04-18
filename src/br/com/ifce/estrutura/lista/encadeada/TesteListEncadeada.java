@@ -1,4 +1,4 @@
-package br.com.ifce.estrutura.recursao;
+package br.com.ifce.estrutura.lista.encadeada;
 
 public class TesteListEncadeada {
 
@@ -13,7 +13,7 @@ public class TesteListEncadeada {
     }
 
     static void varrerListaEncadeada(Encadeado encadeado) {
-        if (encadeado != null && encadeado.getProximo() != null) {
+        if (encadeado.getProximo() != null) {
             System.out.println(encadeado + " proximo -> " + encadeado.getProximo());
             varrerListaEncadeada(encadeado.getProximo());
         } else {
