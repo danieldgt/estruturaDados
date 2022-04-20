@@ -14,5 +14,10 @@ public class TesteDuploEncadeado {
 		System.out.println("Count por variavel: " + listaDupla.getCount());
 		
 		System.out.println("Tem nome francisco? " + listaDupla.containsName("francisco2"));
+	
+		//TODO: dizer qual posicao foi encontrado o nome?
+		//TODO: imprimir a lista com quebra de linha e o numero da posição
+		//TODO: add em uma posição específica um determinado no
+		//TODO: add na frente
 	}
 }
