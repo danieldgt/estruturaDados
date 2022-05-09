@@ -4,15 +4,19 @@ public class NoBinario {
 	private String descricao;
 	private NoBinario direita;
 	private NoBinario esquerda;
+	private NoBinario pai;
 
 	public NoBinario(String descricao) {
-		direita = null;
-		esquerda = null;
+		this.direita = null;
+		this.esquerda = null;
+		this.pai = null;
 		this.descricao = descricao;
 	}
 
-	public NoBinario(String descricao, NoBinario direita, NoBinario esquerda) {
+	public NoBinario(String descricao, NoBinario pai,
+			NoBinario direita, NoBinario esquerda) {
 		super();
+		this.pai = pai;
 		this.descricao = descricao;
 		this.direita = direita;
 		this.esquerda = esquerda;
