@@ -3,6 +3,7 @@ package br.com.ifce.estrutura.arvore;
 public class No {
 	private String descricao;
 	private No[] filhos;// N Filhos
+	private No pai;
 
 	public No(String descricao) {
 		this.descricao = descricao;
