@@ -36,4 +36,29 @@ public class ArvoreBinario {
 			pai.setEsquerda(noToAdd);
 		}
 	}
+
+	public String searchNo(String noDescription) {
+		NoBinario no = searchNoRecursivo(noDescription, root);
+		if(no != null) {
+			return no.getDescricao() + " encontrado";
+		} else {
+			return noDescription + " não encontrado";
+		}
+	}
+
+	private NoBinario searchNoRecursivo(String noDescription, NoBinario node) {
+		if(node == null) {
+			return null;
+		}
+		if(noDescription == node.getDescricao()) {
+			return node;
+		}
+		NoBinario left = searchNoRecursivo(noDescription, node.getEsquerda());
+		NoBinario right = searchNoRecursivo(noDescription, node.getDireita());
+		if(left != null) {
+			return left;
+		} else {
+			return right;
+		}
+	}
 }
