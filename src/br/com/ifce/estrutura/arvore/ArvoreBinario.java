@@ -46,6 +46,34 @@ public class ArvoreBinario {
 		}
 	}
 
+	public void removeNodeWithRemotion(String noDescription) {
+		NoBinario no = searchNoRecursivo(noDescription, root);
+		if(no != null) {
+			if(no.getPai().getEsquerda() == no) {
+				no.getPai().setEsquerda(null);
+			} else {
+				no.getPai().setDireita(null);
+			}
+			System.out.println("Nó removido");
+		} else {
+			System.out.println("Não encontrado");
+		}
+	}
+
+	public void removeNodeWithoutRemotion(String noDescription) {
+		NoBinario no = searchNoRecursivo(noDescription, root);
+		if(no != null) {
+			if(no.getPai().getEsquerda() == no) {
+				no.getPai().setEsquerda(no.getEsquerda());
+			} else {
+				no.getPai().setDireita(no.getDireita());
+			}
+			System.out.println("Nó removido");
+		} else {
+			System.out.println("Não encontrado");
+		}
+	}
+
 	private NoBinario searchNoRecursivo(String noDescription, NoBinario node) {
 		if(node == null) {
 			return null;
