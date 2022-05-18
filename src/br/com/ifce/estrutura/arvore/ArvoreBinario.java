@@ -18,7 +18,10 @@ public class ArvoreBinario {
 	}
 
 	public void addNo(String Add, String posicao, NoBinario noPai) {
-		NoBinario noToAdd = new NoBinario(Add);
+		addNo(new NoBinario(Add), posicao, noPai);
+	}
+
+	public void addNo(NoBinario noToAdd, String posicao, NoBinario noPai) {
 		if (noPai == null) {
 			addFilho(noToAdd, posicao, root);
 		} else {
