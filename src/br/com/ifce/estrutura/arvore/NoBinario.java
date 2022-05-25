@@ -45,4 +45,12 @@ public class NoBinario {
 	public void setEsquerda(NoBinario esquerda) {
 		this.esquerda = esquerda;
 	}
+
+	public NoBinario getPai() {
+		return pai;
+	}
+
+	public void setPai(NoBinario pai) {
+		this.pai = pai;
+	}
 }
